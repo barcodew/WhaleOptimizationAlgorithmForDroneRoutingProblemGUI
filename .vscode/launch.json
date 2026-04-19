@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "java",
+        "name": "PSO_DRP",
+        "request": "launch",
+        "mainClass": "Main.PSO_DRP",
+        "projectName": "DRP_MANUAL_804675c4"
+    },
+    {
+        "type": "java",
+        "name": "GA_DRP",
+        "request": "launch",
+        "mainClass": "Main.GA_DRP",
+        "projectName": "DRP_MANUAL_804675c4"
+    },
+    {
+        "type": "java",
+        "name": "DRP_Full",
+        "request": "launch",
+        "mainClass": "Main.DRP_Full",
+        "projectName": "DRP_MANUAL_804675c4"
+    },
+    {
+        "type": "java",
+        "name": "Run JavaFX GUI",
+        "request": "launch",
+        "mainClass": "GUI.DroneRoutingGUI",
+        "vmArgs": "--module-path C:/javafx-sdk-21/lib --add-modules javafx.controls,javafx.fxml"
+    }
+]
+}
