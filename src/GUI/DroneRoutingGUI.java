@@ -24,8 +24,6 @@ import java.io.*;
 import java.util.*;
 
 public class DroneRoutingGUI extends Application {
-    double segmentEnergy;
-
     Label routeLabel;
     ArrayList<File> datasetFiles = new ArrayList<>();
     ComboBox<String> datasetCombo;
@@ -60,7 +58,8 @@ public class DroneRoutingGUI extends Application {
     double offsetX = 0;
     double offsetY = 0;
     double lastMouseX, lastMouseY;
-
+    double segmentEnergy;
+    
     @Override
     public void start(Stage stage) {
 
@@ -159,17 +158,17 @@ public class DroneRoutingGUI extends Application {
             return;
 
         datasetFiles.clear();
-        datasetCombo.getItems().clear(); // 🔥 WAJIB
+        datasetCombo.getItems().clear(); 
 
         for (File f : files) {
             if (f.getName().toLowerCase().endsWith(".csv")) {
                 datasetFiles.add(f);
-                datasetCombo.getItems().add(f.getName()); // 🔥 WAJIB
+                datasetCombo.getItems().add(f.getName()); 
             }
         }
 
         if (!datasetFiles.isEmpty()) {
-            datasetCombo.getSelectionModel().select(0); // 🔥 pilih default
+            datasetCombo.getSelectionModel().select(0); //  pilih default
 
             File f = datasetFiles.get(0);
             loadDataset(f.getAbsolutePath());

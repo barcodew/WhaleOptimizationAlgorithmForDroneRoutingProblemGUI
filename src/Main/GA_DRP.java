@@ -16,7 +16,7 @@ import Helpers.MatrixBuilder;
  * - Representasi: permutasi langsung (integer array)
  * - Seleksi: Tournament Selection (size 3)
  * - Crossover: Order Crossover (OX)
- * - Mutasi: swap / insert / inverse (sama dengan local search WOA)
+ * - Mutasi: swap / insert / inverse 
  * - Elitism: simpan individu terbaik
  */
 public class GA_DRP {
@@ -28,7 +28,6 @@ public class GA_DRP {
     static final double MUTATION_RATE = 0.3;
     static final int TOURNAMENT_SIZE = 3;
 
-    // === Reuse RunResult & ScenarioResult dari DRP_Full ===
     static class RunResult {
         double fitness, totalDistance, totalEnergy;
         int rechargeCount;
@@ -296,7 +295,7 @@ public class GA_DRP {
         return child;
     }
 
-    // Mutasi: swap / insert / inverse (sama dengan LS di WOA)
+    // Mutasi: swap / insert / inverse 
     static int[] mutate(int[] perm) {
         int[] result = perm.clone();
         int n = result.length;
@@ -344,7 +343,7 @@ public class GA_DRP {
     }
 
     // ============================================================
-    // KOMPONEN EVALUASI (IDENTIK DENGAN WOA)
+    //  EVALUASI - Hindia :v
     // ============================================================
 
     static double evaluateFitnessSilent(int[] perm, double[][] adj, int nc, int ncs) {
@@ -567,7 +566,7 @@ public class GA_DRP {
     }
 
     // ============================================================
-    // EXPORT (format identik dengan WOA)
+    // EXPORT 
     // ============================================================
     static void exportCSV(ArrayList<ScenarioResult> res, String fn) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(fn))) {

@@ -9,7 +9,7 @@ import Helpers.MatrixBuilder;
 
 /**
  * Particle Swarm Optimization untuk Drone Routing Problem
- * Komponen evaluasi fitness identik dengan WOA (DRP_Full.java)
+ * Komponen evaluasi fitness identik dengan WOA 
  * agar perbandingan fair.
  *
  * Komponen PSO:
@@ -246,7 +246,7 @@ public class PSO_DRP {
     }
 
     // ============================================================
-    // LOV DECODE (identik dengan WOA)
+    // LOV DECODE 
     // ============================================================
     static int[] LOVdecode(double[] whale) {
         int n = whale.length;
@@ -266,7 +266,7 @@ public class PSO_DRP {
     }
 
     // ============================================================
-    // KOMPONEN EVALUASI (IDENTIK DENGAN WOA)
+    //  EVALUASI 
     // ============================================================
 
     static double evaluateFitnessSilent(int[] perm, double[][] adj, int nc, int ncs) {
@@ -489,7 +489,7 @@ public class PSO_DRP {
     }
 
     // ============================================================
-    // EXPORT (format identik dengan WOA dan GA)
+    // EXPORT 
     // ============================================================
     static void exportCSV(ArrayList<ScenarioResult> res, String fn) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(fn))) {
