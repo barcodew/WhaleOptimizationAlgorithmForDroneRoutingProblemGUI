@@ -20,7 +20,7 @@ public class DRP_Full {
 
     // === KONSTANTA ===
     static final double ALPHA = 20.0;
-    static final double BATTERY_CAPACITY = 4000.0;
+    static final double BATTERY_CAPACITY = 1000.0;
     static final int MAX_DEPTH = 3;
 
     // === HASIL PER RUN ===
@@ -125,12 +125,12 @@ public class DRP_Full {
                 { 100, 1000 },
         };
 
-        int totalRuns = 10; // jumlah run per skenario
+        int totalRuns = 30; // jumlah run per skenario
 
         // === OUTPUT FOLDER ===
         String timestamp = LocalDateTime.now().format(
                 DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        String outputPrefix = "hasil_" + timestamp;
+        String outputPrefix = "hasil_WOA_" + timestamp;
 
         // === JALANKAN EKSPERIMEN ===
         ArrayList<ScenarioResult> allResults = new ArrayList<>();
@@ -745,7 +745,7 @@ public class DRP_Full {
         }
 
         if (!feasible) {
-            return 1e-10; // death penalty
+            return 0; // death penalty
         }
 
         return 1.0 / (totalEnergy + 1);

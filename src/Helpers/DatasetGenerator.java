@@ -12,14 +12,14 @@ import javax.management.RuntimeErrorException;
 
 public class DatasetGenerator {
     public static void main(String[] args) {
-        int width = 100;
-        int height = 100;
+        int width = 30;
+        int height = 30;
         int[] numberOfCustomers = { 10, 20, 30, 40, 50 };
         int[] numberOfChargingStations = { 2, 3, 4, 5, 6 };
 
         
         for (int k = 0; k < numberOfChargingStations.length; k++) {
-            String fileName = "src\\Datasets\\" + numberOfCustomers[k] + "_Customers.csv";
+            String fileName = "src\\Datasets\\" + numberOfCustomers[k] + "_Customers50.csv";
             if (1 + numberOfCustomers[k] + numberOfChargingStations[k] <= width * height) {
                 try {
 

@@ -14,7 +14,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.animation.*;
 import javafx.geometry.Insets;
@@ -59,7 +58,7 @@ public class DroneRoutingGUI extends Application {
     double offsetY = 0;
     double lastMouseX, lastMouseY;
     double segmentEnergy;
-    
+
     @Override
     public void start(Stage stage) {
 
@@ -98,7 +97,7 @@ public class DroneRoutingGUI extends Application {
         setupAnimation();
         Scene scene = new Scene(root, 1220, 920);
         scene.getStylesheets().add("data:text/css," + getCSS());
-        stage.setTitle("DRP Dashboard — Whale Optimization Algorithm");
+        stage.setTitle("DRP — Whale Optimization Algorithm.");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
@@ -158,17 +157,17 @@ public class DroneRoutingGUI extends Application {
             return;
 
         datasetFiles.clear();
-        datasetCombo.getItems().clear(); 
+        datasetCombo.getItems().clear();
 
         for (File f : files) {
             if (f.getName().toLowerCase().endsWith(".csv")) {
                 datasetFiles.add(f);
-                datasetCombo.getItems().add(f.getName()); 
+                datasetCombo.getItems().add(f.getName());
             }
         }
 
         if (!datasetFiles.isEmpty()) {
-            datasetCombo.getSelectionModel().select(0); //  pilih default
+            datasetCombo.getSelectionModel().select(0); // pilih default
 
             File f = datasetFiles.get(0);
             loadDataset(f.getAbsolutePath());
@@ -427,7 +426,7 @@ public class DroneRoutingGUI extends Application {
         title.setTextFill(Color.web("#e0f0ff"));
         Label pipe = new Label("  |  ");
         pipe.setTextFill(Color.web("#2a4a6a"));
-        Label sub = new Label("Whale Optimization Algorithm");
+        Label sub = new Label("Whale Optimization Algorithm | Made with ♡ by Barcodew.");
         sub.setFont(Font.font("Segoe UI", 12));
         sub.setTextFill(Color.web("#5a8ab5"));
         Region sp = new Region();

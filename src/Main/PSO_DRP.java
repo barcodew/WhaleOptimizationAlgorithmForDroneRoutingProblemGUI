@@ -22,7 +22,7 @@ import Helpers.MatrixBuilder;
 public class PSO_DRP {
 
     static final double ALPHA = 20.0;
-    static final double BATTERY_CAPACITY = 4000.0;
+    static final double BATTERY_CAPACITY = 1000.0;
     static final int MAX_DEPTH = 3;
 
     // Parameter PSO
@@ -87,11 +87,11 @@ public class PSO_DRP {
     // ============================================================
     public static void main(String[] args) {
         String[] datasets = {
-                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\10_Customers.csv",
-                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\20_Customers.csv",
-                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\30_Customers.csv",
-                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\40_Customers.csv",
-                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\50_Customers.csv",
+                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\10_Customers50.csv",
+                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\20_Customers50.csv",
+                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\30_Customers50.csv",
+                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\40_Customers50.csv",
+                "E:\\Skripsian\\WOA\\DRP_MANUAL\\DRP_MANUAL\\src\\Datasets\\50_Customers50.csv",
         };
 
         int[][] skenario = {
@@ -100,7 +100,7 @@ public class PSO_DRP {
                 { 100, 200 }, { 100, 500 }, { 100, 1000 },
         };
 
-        int totalRuns = 10;
+        int totalRuns = 30;
         String ts = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
         String prefix = "hasil_PSO_" + ts;
 

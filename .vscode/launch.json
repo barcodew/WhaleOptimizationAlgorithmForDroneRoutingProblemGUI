@@ -3,6 +3,20 @@
   "configurations": [
     {
         "type": "java",
+        "name": "createAdj",
+        "request": "launch",
+        "mainClass": "Helpers.createAdj",
+        "projectName": "DRP_MANUAL_804675c4"
+    },
+    {
+        "type": "java",
+        "name": "DatasetGenerator",
+        "request": "launch",
+        "mainClass": "Helpers.DatasetGenerator",
+        "projectName": "DRP_MANUAL_804675c4"
+    },
+    {
+        "type": "java",
         "name": "PSO_DRP",
         "request": "launch",
         "mainClass": "Main.PSO_DRP",
