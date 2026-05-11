@@ -304,7 +304,7 @@ public class DRP_Full {
                 double newFitness = evaluateFitnessSilent(improvedPerm, adj, numCustomers, numCS);
 
                 if (newFitness > fitnessAll[i]) {
-                    population[i] = RLOVencode(improvedPerm); // 🔥 FIX
+                    population[i] = RLOVencode(improvedPerm); 
                     permutasiAll[i] = improvedPerm;
                     fitnessAll[i] = newFitness;
                 }
